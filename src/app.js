@@ -5,6 +5,7 @@ const weather = require('./utils/weather');
 const { Z_FIXED } = require('zlib');
 const { send } = require('process');
 
+const port  =process.env.PORT || 3000;
 const serveDir = path.join(__dirname, '../whatstheweather/dist/whatstheweather');
 
 const app = express();
@@ -80,6 +81,6 @@ app.get('/weather', (req, res) => {
 })
 
 
-app.listen(5000, () => {
-    console.log("Server is up on port 5000");
+app.listen(port, () => {
+    console.log("Server is up on port : " + port);
 })
