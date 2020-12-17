@@ -1,0 +1,43 @@
+<header class="masthead">
+    <div class="container d-flex h-100 align-items-center">
+        <div class="mx-auto text-center">
+            <h1 class="">What's the weather??</h1>
+            <h2 class="text-white-50 mx-auto mt-2 mb-5">Check the weather temperature, the feels like temperature and the chances of rain for any city on the planet!</h2>
+
+            <div class="social-box">
+                <div class="container">
+                     <div class="row">
+                             <div class="col-lg-12 col-xs-12  text-center">
+
+                                <div class="box">
+
+                                   <form [formGroup]="checkWeather" (ngSubmit)="onSubmitWeather()">
+                                    <div class="form-group">
+                                    <label for="">Enter the city where you want to check the weather</label>
+                                    <input type="text" class="form-control" formControlName="weatherInput" placeholder="Enter a city...">
+                                      </div>
+                                      <button type="submit" class="btn btn-primary custom-button">Check weather</button>
+                                    </form>
+
+                                    <i class="fa fa-twitter fa-3x" aria-hidden="true"></i>
+
+                                    <div class="box-text">
+                                        <span>{{location}}</span>
+                                    </div>
+                                    <div class="box-text">
+                                        <h6>{{weather}}</h6>
+                                    </div>
+
+
+                                 </div>
+                                 <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/2S_v448ZfEE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+
+                            </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
