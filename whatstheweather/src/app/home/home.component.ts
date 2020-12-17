@@ -21,7 +21,7 @@ export class HomeComponent implements OnInit {
   onSubmitWeather(){
 
 
-    this.http.get('http://localhost:5000/help?address='+this.checkWeather.value.weatherInput+'')
+    this.http.get('/help?address='+this.checkWeather.value.weatherInput+'')
     .subscribe(res =>{
       this.obj= res;
 
